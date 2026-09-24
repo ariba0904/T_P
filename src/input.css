@@ -1,0 +1,91 @@
+
+@import "tailwindcss";
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff9fc;
+    color: #17131a;
+}
+
+/* Custom selection */
+::selection {
+    background: #f5c2d8;
+    color: #17131a;
+}
+
+/* Soft glass effect */
+.glass {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(216, 199, 242, 0.55);
+}
+
+/* Soft pink-purple gradient */
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #b85c8a,
+        #8b6bb1,
+        #6f5797
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float-animation {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Fade up animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    animation: fadeUp 0.9s ease forwards;
+}
+.skill-card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(216, 199, 242, 0.6);
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    text-align: center;
+    font-weight: 700;
+    color: #17131a;
+    box-shadow: 0 10px 30px rgba(216, 199, 242, 0.18);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    background: #fceaf3;
+    box-shadow: 0 15px 35px rgba(216, 199, 242, 0.3);
+}
